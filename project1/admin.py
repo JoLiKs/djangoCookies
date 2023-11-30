@@ -1,3 +1,7 @@
 from django.contrib import admin
 
-# Register your models here.
+from project1.models import ModelAlex, ModelAlexImg, ModelReg
+
+admin.site.register(ModelAlex)
+admin.site.register(ModelAlexImg)
+admin.site.register(ModelReg)
