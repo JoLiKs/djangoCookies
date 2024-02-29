@@ -7,6 +7,8 @@ from project1 import views
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', views.index),
+    path('register/', views.register),
     path('login/', views.login),
-    path('author/', views.author)
+    path('profile/', views.profile),
+    path('testo/', views.testo)
 ]
