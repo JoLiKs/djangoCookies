@@ -1,10 +1,8 @@
 import asyncio
 import random
-
 from django.http import HttpResponse
 from django.shortcuts import render, redirect
 from django.views.decorators.csrf import csrf_exempt
-
 from project1.forms import ImageForm
 from project1.models import ModelAlex, ModelReg, Img
 
@@ -55,7 +53,7 @@ def login(request):
 @csrf_exempt
 def testo(request):
     if request.method == 'POST':
-        if request.POST['login'] == 'Egor' and request.POST['pass'] == '123123':
+        if request.POST['login'] == 'Egor' and request.POST['pass'] == '123123': #сравниваем поля из форм с определенными значениями
             return render(request, 'testo.html', {'form': 'Авторизация пройдена!'})
         else:
             return render(request, 'testo.html', {'form': 'Неверный логин или пароль!'})
