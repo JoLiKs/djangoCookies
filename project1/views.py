@@ -27,7 +27,7 @@ def register(request):
         reg.email = request.POST['email']
         reg.password = request.POST['password']
         reg.login = request.POST['login']
-        reg.save()
+        reg.save() #сохранение в базу данных
         return HttpResponse(f'Пользователь с Email: {reg.email} успешно зарегистрирован!')
     return render(request, 'login.html')
 
